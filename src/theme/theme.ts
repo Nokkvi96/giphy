@@ -33,7 +33,7 @@ const buttonBase = {
   borderColor: "primary",
   padding: "0 20px",
   height: 50,
-  borderRadius: 50,
+  borderRadius: 10,
 };
 
 export const buttons = {
@@ -64,6 +64,7 @@ const fonts = {
 
 const shadows = {
   small: "0 0 4px rgba(0, 0, 0, .125)",
+  medium: "0 0 12px rgba(0, 0, 0, .125)",
   large: "0 0 24px rgba(0, 0, 0, .125)",
   outline: "0px 0px 0px 4px rgba(0, 0, 0, 0.1);",
 };

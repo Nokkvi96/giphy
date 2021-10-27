@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import { Box, BoxProps } from './Box'
+import styled from "styled-components";
+import { Box, BoxProps } from "./Box";
 
-export type FlexProps = BoxProps
+export type FlexProps = BoxProps;
 
-export const Flex = styled(Box)({})
+export const Flex = styled(Box)({});
 
 Flex.defaultProps = {
-  display: 'flex',
-}
+  display: "flex",
+};
