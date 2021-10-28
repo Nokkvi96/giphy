@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react'
-import styled from 'styled-components'
+import { HTMLAttributes } from "react";
+import styled from "styled-components";
 import {
   background,
   BackgroundProps,
@@ -25,10 +25,10 @@ import {
   typography,
   TypographyProps,
   variant,
-} from 'styled-system'
+} from "styled-system";
 
-type TextDecorationOption = 'overline' | 'line-through' | 'underline'
-type TextTransformOption = 'uppercase' | 'lowercase' | 'capitalize'
+type TextDecorationOption = "overline" | "line-through" | "underline";
+type TextTransformOption = "uppercase" | "lowercase" | "capitalize";
 
 export type BoxProps = BackgroundProps &
   ButtonStyleProps &
@@ -43,21 +43,21 @@ export type BoxProps = BackgroundProps &
   TypographyProps & {
     textDecoration?:
       | TextDecorationOption
-      | (TextDecorationOption | null | string)[]
+      | (TextDecorationOption | null | string)[];
     textTransform?:
       | TextTransformOption
-      | (TextTransformOption | null | string)[]
-  } & HTMLAttributes<any>
+      | (TextTransformOption | null | string)[];
+  } & HTMLAttributes<any>;
 
 const textDecoration = style({
-  prop: 'textDecoration',
-  cssProperty: 'textDecoration',
-})
+  prop: "textDecoration",
+  cssProperty: "textDecoration",
+});
 
 const textTransform = style({
-  prop: 'textTransform',
-  cssProperty: 'textTransform',
-})
+  prop: "textTransform",
+  cssProperty: "textTransform",
+});
 
 const boxStyles = compose(
   background,
@@ -73,17 +73,17 @@ const boxStyles = compose(
   textTransform,
   typography,
   variant({
-    prop: 'variant',
-    scale: 'buttons',
+    prop: "variant",
+    scale: "buttons",
     variants: {
       primary: {},
     },
   })
-)
+);
 
 export const Box = styled.div<BoxProps>(
   {
-    boxSizing: 'border-box',
+    boxSizing: "border-box",
   },
   boxStyles
-)
+);
