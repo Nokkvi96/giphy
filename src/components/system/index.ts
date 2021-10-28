@@ -5,4 +5,5 @@ export * from "./Flex";
 export * from "./Heading";
 export * from "./Space";
 export * from "./Text";
+export * from "./Stack";
 export * from "./grid";
