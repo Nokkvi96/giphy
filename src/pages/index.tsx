@@ -5,12 +5,11 @@ import Link from "next/link";
 import {
   Box,
   Card,
-  Column,
   Contain,
   Flex,
   Heading,
-  Row,
   Text,
+  Paragraph,
 } from "@components/system";
 import { Button } from "@components/atoms";
 import { BaseLayout } from "@components/BaseLayout";
@@ -26,29 +25,37 @@ const Home: NextPage = () => {
       <Flex flexDirection="column" height="100%" bg="bg">
         <Box my="auto">
           <Contain>
-            <Row>
-              <Column col={[12, 10, 8]} inset={[null, 1, 2]}>
-                <Flex
-                  alignItems="center"
-                  justifyContent="center"
-                  flexDirection="column"
-                >
-                  <Heading as="h1" mb="s">
-                    You are Lost!
-                  </Heading>
-                  <Text textAlign="center" mb="m">
-                    404
-                  </Text>
-                  <Link href="/">Go Home</Link>
-                  <Button variant="secondary" size="medium">
-                    Press Here!
-                  </Button>
-                  <Card backgroundColor="white" mx="m">
-                    <Text color="primary">HEHEHEHEH</Text>
-                  </Card>
-                </Flex>
-              </Column>
-            </Row>
+            <Flex
+              alignItems="center"
+              justifyContent="center"
+              flexDirection="column"
+            >
+              <Heading as="h2" mb="s">
+                You are Lost!
+              </Heading>
+              <Text textAlign="center" mb="m">
+                404
+              </Text>
+              <Button variant="primary" size="large">
+                Press Here!
+              </Button>
+              <Card
+                backgroundColor="white"
+                boxShadow="medium"
+                p="xxl"
+                alignContent="center"
+                justifyContent="center"
+                display="flex"
+                flexDirection="column"
+              >
+                <Text color="primary" m="xxxs">
+                  HEHEHEHEH
+                </Text>
+                <Paragraph color="primary" m="xxxs">
+                  HEHEHEHEHheheheehhe
+                </Paragraph>
+              </Card>
+            </Flex>
           </Contain>
         </Box>
       </Flex>
