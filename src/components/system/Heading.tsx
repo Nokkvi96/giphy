@@ -1,15 +1,17 @@
-import { HTMLAttributes } from 'react'
-import styled from 'styled-components'
+import { HTMLAttributes } from "react";
+import styled from "styled-components";
 
-import { Text, TextProps } from './Text'
+import { Text, TextProps } from "./Text";
 
 export type HeadingProps = TextProps &
   HTMLAttributes<HTMLHeadingElement> & {
-    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  }
+    as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  };
 
-export const Heading = styled(Text)<HeadingProps>({})
+export const Heading = styled(Text)<HeadingProps>({
+  fontFamily: "Lora",
+});
 
 Heading.defaultProps = {
-  as: 'h2',
-}
+  as: "h2",
+};
