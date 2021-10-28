@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, Component } from "react";
+import { ButtonHTMLAttributes, Component } from "react";
 import styled from "styled-components";
 
 import { buttons } from "@theme/theme";
@@ -18,11 +18,13 @@ export type ButtonProps = BoxProps &
     variant?: keyof typeof buttons;
     size?: "small" | "medium" | "large";
     disabled?: boolean;
+    iconReverse?: boolean;
     block?: boolean;
     inline?: boolean;
     justify?: "center" | "space-between";
     loading?: boolean;
     selected?: boolean;
+    ripple?: boolean;
     href?: string;
     target?: string;
   };
@@ -53,6 +55,7 @@ const ButtonLabel = styled.span<ButtonProps>`
   width: 100%;
   align-items: center;
   justify-content: ${(props) => props.justify};
+  flex-direction: ${(props) => (props.iconReverse ? "row-reverse" : "row")};
 `;
 
 // this is a class component because Buttons often need a ref, and function components require React.forwardRef to forward refs
@@ -65,6 +68,7 @@ export class Button extends Component<ButtonProps> {
       justify = "center",
       size = "medium",
       type = "button",
+      ripple = true,
       loading,
       disabled,
       ...props
@@ -84,9 +88,13 @@ export class Button extends Component<ButtonProps> {
         size={size}
         {...props}
       >
-        <ButtonLabel size={size} justify={justify} {...props}>
-          {children}
-        </ButtonLabel>
+        {variant === "clear" ? (
+          children
+        ) : (
+          <ButtonLabel size={size} justify={justify} {...props}>
+            <span>{children}</span>
+          </ButtonLabel>
+        )}
       </ButtonBase>
     );
   }
