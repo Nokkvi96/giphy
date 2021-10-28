@@ -1,30 +1,25 @@
+import { darken, modularScale } from "polished";
+
 import { ThemeGrid } from "@components/system";
-import { darken } from "polished";
 import { DefaultTheme } from "styled-components";
 
 import { colors } from "./colors";
 import { grid } from "./grid";
 
-const fontSizes = {
-  xxxs: 12,
-  xxs: 16,
-  xs: 20,
-  s: 30,
-  m: 40,
-  l: 60,
-  xl: 80,
-  xxl: 100,
-};
+let fontSizes = [];
+for (let i = 0; i < 20; i++) {
+  fontSizes[i] = modularScale(i - 2, "1rem", "majorSecond");
+}
 
 const space = {
-  xxxs: 8,
-  xxs: 10,
-  xs: 20,
-  s: 40,
-  m: 60,
-  l: 80,
-  xl: 100,
-  xxl: 120,
+  xxxs: fontSizes[2],
+  xxs: fontSizes[3],
+  xs: fontSizes[4],
+  s: fontSizes[6],
+  m: fontSizes[8],
+  l: fontSizes[11],
+  xl: fontSizes[14],
+  xxl: fontSizes[17],
 };
 
 const buttonBase = {
@@ -58,8 +53,8 @@ export const buttons = {
 };
 
 const fonts = {
-  body: "Work Sans, sans-serif",
-  heading: "Helvetica",
+  body: "Poppins, sans-serif",
+  heading: "Lora, serif",
 };
 
 const shadows = {
@@ -82,7 +77,7 @@ export interface CustomTheme {
 }
 
 export const theme: DefaultTheme = {
-  breakpoints: ["40em", "52em", "64em", "80em"],
+  breakpoints: ["40rem", "52rem", "64rem", "80rem"],
   fontSizes,
   space,
   fonts,
