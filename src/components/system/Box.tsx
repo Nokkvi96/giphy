@@ -3,6 +3,9 @@ import styled from "styled-components";
 import {
   background,
   BackgroundProps,
+  BorderProps,
+  BorderColorProps,
+  BorderRadiusProps,
   ButtonStyleProps,
   color,
   ColorProps,
@@ -25,12 +28,18 @@ import {
   typography,
   TypographyProps,
   variant,
+  border,
+  borderColor,
+  borderRadius,
 } from "styled-system";
 
 type TextDecorationOption = "overline" | "line-through" | "underline";
 type TextTransformOption = "uppercase" | "lowercase" | "capitalize";
 
 export type BoxProps = BackgroundProps &
+  BorderProps &
+  BorderColorProps &
+  BorderRadiusProps &
   ButtonStyleProps &
   ColorProps &
   ColorStyleProps &
@@ -61,6 +70,9 @@ const textTransform = style({
 
 const boxStyles = compose(
   background,
+  border,
+  borderColor,
+  borderRadius,
   color,
   colorStyle,
   flexbox,
