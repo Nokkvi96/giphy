@@ -8,19 +8,31 @@ import { grid } from "./grid";
 
 let fontSizes = [];
 for (let i = 0; i < 20; i++) {
-  fontSizes[i] = modularScale(i - 2, "1rem", "majorSecond");
+  fontSizes[i] = modularScale(i - 2, "1rem", "majorThird");
 }
 
-const space = {
-  xxxs: fontSizes[2],
-  xxs: fontSizes[3],
-  xs: fontSizes[4],
-  s: fontSizes[6],
-  m: fontSizes[8],
-  l: fontSizes[11],
-  xl: fontSizes[14],
-  xxl: fontSizes[17],
-};
+const space = [
+  "0rem", // 0
+  "0.2rem", // 1
+  "0.4rem", // 2
+  "0.8rem", // 3
+  "1rem", // 4
+  "1.2rem", // 5
+  "1.6rem", // 6
+  "1.4rem", // 7
+  "1.8rem", // 8
+  "2rem", // 9
+  "2.4rem", // 10
+  "2.8rem", // 11
+  "3.2rem", // 12
+  "3.6rem", // 13
+  "4rem", // 14
+  "4.5rem", // 15
+  "5rem", // 16
+  "5.5rem", // 17
+  "6rem", // 18
+  "7rem", // 19
+];
 
 const buttonBase = {
   fontWeight: "bold",

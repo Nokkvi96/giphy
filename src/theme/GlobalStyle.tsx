@@ -14,7 +14,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  /* Remove default margin */
   body,
   h1,
   h2,
@@ -26,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   dl,
   dd {
     margin: 0;
+    ${theme.colors.black}
   }
 
   h1,
@@ -47,13 +47,6 @@ export const GlobalStyle = createGlobalStyle`
   /* Set core root defaults */
   html:focus-within {
     scroll-behavior: smooth;
-  }
-
-  /* Set core body defaults */
-  body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
   }
 
   /* Make images easier to work with */
@@ -92,7 +85,10 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.8;
     min-width: 320px;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
   }
+  
   h1,h1,h3,h4,h5,h6 {
     font-family: ${theme.fonts.heading};
   }
