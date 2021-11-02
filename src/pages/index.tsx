@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
+import { lighten } from "polished";
 
 import {
   Box,
@@ -12,9 +12,11 @@ import {
   Paragraph,
   Stack,
 } from "@components/system";
-import { Button } from "@components/atoms";
+import { theme } from "@theme/theme";
 import { BaseLayout } from "@components/BaseLayout";
+import { SearchBox, Label } from "@components/atoms";
 
+const { colors } = theme;
 const Home: NextPage = () => {
   return (
     <BaseLayout>
@@ -23,49 +25,18 @@ const Home: NextPage = () => {
         <meta name="description" content="Search for your favorite gifs!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex flexDirection="column" height="100%">
-        <Box my="auto">
-          <Contain>
-            <Flex
-              alignItems="center"
-              justifyContent="center"
-              flexDirection="column"
-            >
-              <Heading as="h2" mb="s">
-                You are Lost!
-              </Heading>
-              <Text textAlign="center" mb="m">
-                404
-              </Text>
-              <Button variant="primary" size="large">
-                Press Here!
-              </Button>
-              <Card
-                backgroundColor="white"
-                boxShadow="medium"
-                p="xxl"
-                alignContent="center"
-                justifyContent="center"
-                display="flex"
-                flexDirection="column"
-              >
-                <Text color="primary" m="xxxs">
-                  HEHEHEHEH
-                </Text>
-                <Paragraph color="primary" m="xxxs">
-                  HEHEHEHEHheheheehhe
-                </Paragraph>
-              </Card>
-            </Flex>
-          </Contain>
+      <Stack gap={[4, null, 6]} direction="column" mb={[4, null, 6]}>
+        <Box bg={lighten(0.36, colors.primary)} mt={4} p={2} borderRadius={10}>
+          <SearchBox
+            label="Leitaðu að gifi"
+            placeholder="Leitaðu að gifi"
+            onChange={() => console.log("test")}
+          ></SearchBox>
         </Box>
-      </Flex>
-      <Stack gap={["m", null, "l"]} direction="column" mb={["l", null, "xl"]}>
-        <Text color="primary">HEHEHEHEHheheheehhe</Text>
-        <Text color="primary">HEHEHEHEHheheheehhe</Text>
-        <Text color="primary">HEHEHEHEHheheheehhe</Text>
+        <Box bg="black">
+          <Text>hehe</Text>
+        </Box>
       </Stack>
-      <Text color="primary">HEHEHEHEHheheheehhe</Text>
     </BaseLayout>
   );
 };

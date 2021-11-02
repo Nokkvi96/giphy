@@ -35,11 +35,13 @@ export const Text = styled(Box)<TextProps>`
       text-overflow: ellipsis;
     `}
 `;
+
 export const Paragraph = styled(Text)({});
 
 Text.defaultProps = {
   as: "span",
 };
+
 Paragraph.defaultProps = {
   as: "p",
 };

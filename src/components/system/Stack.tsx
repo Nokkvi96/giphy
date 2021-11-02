@@ -1,33 +1,21 @@
 import styled from "styled-components";
 import {
   system,
-  SpaceProps,
-  ColorProps,
-  LayoutProps,
-  FlexboxProps,
   ResponsiveValue,
   TLengthStyledSystem,
   BorderProps,
-  ShadowProps,
-  PositionProps,
 } from "styled-system";
 import { Flex } from "./Flex";
 import { BoxProps } from "./Box";
 
 type Direction = "column" | "row";
 
-type Props = BoxProps &
-  BorderProps &
-  ShadowProps & {
-    /** Spacing between items */
-    gap?: ResponsiveValue<TLengthStyledSystem>;
-    direction?: ResponsiveValue<Direction>;
-  };
+type Props = BoxProps & {
+  /** Spacing between items */
+  gap?: ResponsiveValue<TLengthStyledSystem>;
+  direction?: ResponsiveValue<Direction>;
+};
 
-/**
- * Stacking layout: horizontal, vertical, and responsive. Adds equal amount
- * of spacing between children.
- */
 export const Stack = styled(Flex)<Props>(
   system({
     gap: {
