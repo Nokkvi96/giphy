@@ -13,9 +13,9 @@ export interface ThemeGrid {
 const { space } = theme;
 
 export const defaultGrid = {
-  gutter: [space.m, null, space.xl],
+  gutter: [12, null, 17],
   container: {
     maxWidth: 1280,
-    padding: [space.m, null, space.xxl],
+    padding: [12, null, 18],
   },
 };
