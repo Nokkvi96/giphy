@@ -1,6 +1,5 @@
 import React, { InputHTMLAttributes, useState } from "react";
 import styled, { css } from "styled-components";
-import { FaSearch } from "react-icons/fa";
 
 import { theme } from "@theme/theme";
 import { Box } from "@components/system";
@@ -31,7 +30,7 @@ const StyledInput = styled.input<InputProps>`
     outline: none;
   }
   ::placeholder {
-    color: ${colors.grey.dark};
+    color: ${colors.grey400};
   }
 `;
 
@@ -46,7 +45,7 @@ const InputWrapper = styled.div<InputWrapperProps>`
   width: 100%;
 
   color: ${(props) => props.color || colors.black}};
-  border: 1px solid ${colors.grey.light};
+  border: 1px solid ${colors.grey200};
   border-radius: 8px;
   padding: 0.4em 0.5em;
 
@@ -69,7 +68,7 @@ export const SearchBox: React.FC<InputProps> = ({ size, ...props }) => {
   return (
     <>
       {props.label && (
-        <Label color={colors.secondary} fontWeight="bold">
+        <Label color={colors.primary800} fontWeight="bold">
           {props.label}
         </Label>
       )}

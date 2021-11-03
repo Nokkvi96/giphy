@@ -49,7 +49,7 @@ export const buttons = {
     bg: "primary",
     color: "white",
     ["&:hover, &:focus"]: {
-      backgroundColor: darken(0.2, colors.primary),
+      backgroundColor: "colors.primary.600",
     },
   },
   secondary: {
