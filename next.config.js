@@ -20,6 +20,6 @@ module.exports = {
       "media3.giphy.com",
       "media4.giphy.com",
     ],
-    formats: ["image/webp", "image.gif"],
+    formats: ["image/avif", "image/webp"],
   },
 };
