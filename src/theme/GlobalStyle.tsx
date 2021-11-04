@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   dl,
   dd {
     margin: 0;
-    ${theme.colors.black}
+    color: ${theme.colors.black};
   }
 
   h1,
@@ -83,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${theme.fonts.body};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.8;
+    line-height: 1.2;
     min-width: 320px;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
@@ -94,22 +94,22 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: ${theme.fontSizes[16]};
-  }
-  h2 {
-    font-size: ${theme.fontSizes[14]};
-  }
-  h3 {
-    font-size: ${theme.fontSizes[12]};
-  }
-  h4 { 
     font-size: ${theme.fontSizes[10]};
   }
+  h2 {
+    font-size: ${theme.fontSizes[9]};
+  }
+  h3 {
+    font-size: ${theme.fontSizes[7]};
+  }
+  h4 { 
+    font-size: ${theme.fontSizes[5]};
+  }
   h5 {
-    font-size: ${theme.fontSizes[8]};
+    font-size: ${theme.fontSizes[4]};
   }
   h6 {
-    font-size: ${theme.fontSizes[7]};
+    font-size: ${theme.fontSizes[3]};
   }
 
   a {
