@@ -9,9 +9,9 @@ module.exports = {
 
     return config;
   },
-  env: {
-    AUTH_SECRET: process.env.API_KEY,
-  },
+  // env: {
+  //   AUTH_SECRET: process.env.API_KEY,
+  // },
   images: {
     domains: [
       "media0.giphy.com",
