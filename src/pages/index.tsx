@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useQuery } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+// import { ReactQueryDevtools } from "react-query/devtools";
 
 import { useDebouncedValue } from "rooks";
 
@@ -82,7 +82,6 @@ const Home: NextPage = () => {
           </Flex>
         </Box>
       </Stack>
-      <ReactQueryDevtools initialIsOpen={false} />
     </BaseLayout>
   );
 };
