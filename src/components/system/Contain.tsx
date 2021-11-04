@@ -11,18 +11,8 @@ export const Contain: React.FC<ContainProps> = (props) => {
   return (
     <Box
       mx="auto"
-      px={
-        themeContext &&
-        themeContext.grid &&
-        themeContext.grid.container &&
-        themeContext.grid.container.padding
-      }
-      maxWidth={
-        themeContext &&
-        themeContext.grid &&
-        themeContext.grid.container &&
-        themeContext.grid.container.maxWidth
-      }
+      px={themeContext?.grid?.container?.padding}
+      maxWidth={themeContext?.grid?.container?.maxWidth}
       {...props}
     />
   );
