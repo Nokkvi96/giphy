@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
 import { useDebouncedValue } from "rooks";
 
-import { Box, Text, Stack } from "@components/system";
+import { Box, Contain, Text, Stack, Heading, Flex } from "@components/system";
 
 import { theme } from "@theme/theme";
 import { BaseLayout } from "@components/BaseLayout";
@@ -50,22 +51,35 @@ const Home: NextPage = () => {
         <meta name="description" content="Search for your favorite gifs!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Stack gap={[4, null, 6]} direction="column" mb={[4, null, 6]}>
-        <Box bg="primary50" mt={4} p={2} borderRadius={10}>
+      <Stack direction="column" gap={[4, null, 6]} mt={[8, null, 10]}>
+        <Heading as="h1" fontSize={[4, 6]} color="primary300">
+          Finndu uppáhalds gifið þitt!
+        </Heading>
+        <Box bg="grey400" mt={4} p={2} borderRadius={10}>
           <SearchBox
-            label="Leitaðu að gifi"
             placeholder="Leitaðu að gifi"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           ></SearchBox>
         </Box>
-        <Box bg="white">
-          <Stack gap={[4, null, 6]} direction="column" mb={[4, null, 6]}>
-            <Text>{status}</Text>
+        <Box mb={[8, null, 10]}>
+          <Flex
+            flexDirection="row"
+            flexWrap="wrap"
+            justifyContent="space-around"
+          >
             {data?.data.map((d: any) => (
-              <Text key={d.id}>{d.url}</Text>
+              <Box maxWidth={["100%", "50%", "50%", "33%"]} alignSelf="center">
+                <Image
+                  key={d.id}
+                  src={d.images?.downsized?.url}
+                  height={d.images.downsized.height}
+                  width={d.images.downsized.width}
+                  objectFit="cover"
+                />
+              </Box>
             ))}
-          </Stack>
+          </Flex>
         </Box>
       </Stack>
       <ReactQueryDevtools initialIsOpen={false} />

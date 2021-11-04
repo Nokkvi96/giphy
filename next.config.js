@@ -12,4 +12,14 @@ module.exports = {
   env: {
     AUTH_SECRET: process.env.API_KEY,
   },
+  images: {
+    domains: [
+      "media0.giphy.com",
+      "media1.giphy.com",
+      "media2.giphy.com",
+      "media3.giphy.com",
+      "media4.giphy.com",
+    ],
+    formats: ["image/avif", "image/webp", "image.gif"],
+  },
 };
