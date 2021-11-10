@@ -10,7 +10,7 @@ module.exports = {
     return config;
   },
   env: {
-    AUTH_SECRET: process.env.GIPHY_API_KEY,
+    GIPHY_API_KEY: process.env.GIPHY_API_KEY,
   },
   images: {
     domains: [
