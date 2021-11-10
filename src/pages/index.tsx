@@ -30,7 +30,7 @@ const Home: NextPage = () => {
 
   const { data, status } = useQuery(["todos", debouncedQuery], async () => {
     const response = await fetch(
-      `https://api.giphy.com/v1/gifs/search?api_key=${process.env.API_KEY}&q=${debouncedQuery}`
+      `https://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_API_KEY}&q=${debouncedQuery}`
     );
     if (!response.ok) {
       throw new Error("Network response was not ok");
