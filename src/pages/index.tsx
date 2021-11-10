@@ -38,11 +38,11 @@ const Home: NextPage = () => {
     return response.json();
   });
 
-  useEffect(() => {
-    console.log(debouncedQuery);
-    console.log(data);
-    console.log(status);
-  }, [debouncedQuery, status, data]);
+  // useEffect(() => {
+  //   console.log(debouncedQuery);
+  //   console.log(data);
+  //   console.log(status);
+  // }, [debouncedQuery, status, data]);
 
   return (
     <BaseLayout>
